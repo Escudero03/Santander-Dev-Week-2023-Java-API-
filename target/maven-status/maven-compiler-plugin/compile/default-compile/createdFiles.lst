@@ -1,0 +1,7 @@
+com\santander\devweek\service\UsuarioService.class
+com\santander\devweek\config\SwaggerConfig.class
+com\santander\devweek\DevweekApplication.class
+com\santander\devweek\controller\UsuarioController.class
+com\santander\devweek\model\Usuario.class
+com\santander\devweek\config\GlobalExceptionHandler.class
+com\santander\devweek\repository\UsuarioRepository.class
