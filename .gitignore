@@ -35,3 +35,33 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Maven
+target/
+*.jar
+*.war
+*.ear
+*.log
+
+# Compiled class files
+*.class
+
+# Log files
+logs/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Banco de dados H2
+data/
+
+# Relatórios de teste
+target/surefire-reports/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

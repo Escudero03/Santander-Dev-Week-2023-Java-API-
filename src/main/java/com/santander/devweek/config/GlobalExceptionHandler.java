@@ -17,22 +17,20 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, Object>> handleValidationExceptions(
       MethodArgumentNotValidException ex) {
-        Map<String, Object> errors = new HashMap<>();
-        
-        Map<String, String> fieldErrors = ex.getBindingResult().getFieldErrors().stream()
+        Map<String, String> errors = ex.getBindingResult()
+            .getAllErrors()
+            .stream()
             .collect(Collectors.toMap(
-                FieldError::getField, 
-                FieldError::getDefaultMessage, 
+                error -> ((FieldError) error).getField(),
+                error -> error.getDefaultMessage(),
                 (existing, replacement) -> existing
             ));
         
-        errors.put("status", HttpStatus.BAD_REQUEST.value());
-        errors.put("errors", fieldErrors);
+        Map<String, Object> response = new HashMap<>();
+        response.put("status", HttpStatus.BAD_REQUEST.value());
+        response.put("errors", errors);
         
-        // Log para console
-        System.err.println("Validation Errors: " + fieldErrors);
-        
-        return ResponseEntity.badRequest().body(errors);
+        return ResponseEntity.badRequest().body(response);
     }
 
     @ExceptionHandler(RuntimeException.class)
@@ -41,10 +39,16 @@ public class GlobalExceptionHandler {
         error.put("status", HttpStatus.BAD_REQUEST.value());
         error.put("message", ex.getMessage());
         
-        // Log para console
-        System.err.println("Runtime Exception: " + ex.getMessage());
-        ex.printStackTrace();
-        
         return ResponseEntity.badRequest().body(error);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<Map<String, Object>> handleGeneralExceptions(Exception ex) {
+        Map<String, Object> error = new HashMap<>();
+        error.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
+        error.put("message", "Erro interno do servidor");
+        error.put("details", ex.getMessage());
+        
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 }
