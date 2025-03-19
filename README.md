@@ -1,4 +1,4 @@
-# 🏦 Santander Dev Week 2023 - Java API  -  [Acesse  API ](https://santander-dev-week-seu-nome-9db2a453e087.herokuapp.com/swagger-ui.html)
+# 🏦 Santander Dev Week 2023 - Java API  - 👉 [Acesse a API ](https://santander-dev-week-seu-nome-9db2a453e087.herokuapp.com/swagger-ui.html) 👈
 
 ## 📌 Sobre o Projeto
 
@@ -7,6 +7,17 @@ Projeto desenvolvido durante a Santander Dev Week 2023, uma API RESTful robusta 
 ## 🖼️ Galeria de Imagens
 
 <!-- Espaço para suas imagens -->
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
+  <img src="teste1.png" alt="Tela de Agendamento" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">      
+  <img src="teste0.png" alt="Cliente Cadastrado no Banco" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+  <img src="Get -user.png" alt="Cadastrando Cliente" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+   <img src="teste3-listaUsuario.png" alt="Confirmação de Cadastro" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+  <img src="teste2-estatistica.png" alt="Confirmação de Cadastro" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">   <img src="teste4-BuscaUsuarioID.png" alt="Cadastrando Cliente" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+   
+</div>
+
+
 <p align="center">
   <img src="https://your-image-url.com/project-screenshot1.png" width="400"/>
   <img src="https://your-image-url.com/project-screenshot2.png" width="400"/>
@@ -31,6 +42,7 @@ Projeto desenvolvido durante a Santander Dev Week 2023, uma API RESTful robusta 
   - 🔧 Maven
   - 💻 VS Code
   - 🐙 Git
+  - ✅ Deploy -Heroku
 
 ## 🛠️ Desafios Encontrados
 
