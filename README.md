@@ -100,6 +100,8 @@ PUT /usuarios/{id}: ✏️ Atualizar usuário
 
 DELETE /usuarios/{id}: ❌ Deletar usuário
 
+GET /usuarios: 📋🔂 Estatisticas
+
 ---
 
 🏆 Reconhecimento
